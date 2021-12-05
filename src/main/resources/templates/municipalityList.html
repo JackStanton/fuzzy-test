@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      lang="ru"
+>
+<head>
+    <title>Муниципалитеты</title>
+</head>
+<body>
+<div th:replace="~{includes/links.html :: div}"></div>
+<div class="navbar">
+    <nav th:replace="~{includes/navbar.html :: nav}"></nav>
+</div>
+<div class="container-fluid well text-center">
+    <div class="panel-body">
+        <h1>Таблица "Муниципалитеты"</h1>
+    </div>
+</div>
+
+<div class="container-fluid text-center">
+    <br>
+    <table class="table table-hover table-bordered" >
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">Название</th>
+            <th scope="col">Высота</th>
+            <th scope="col">Размер</th>
+            <th scope="col">Заполненность</th>
+            <th scope="col">pollution</th>
+            <th scope="col">opinion_q</th>
+            <th scope="col">n_days_snow</th>
+            <th scope="col">id_dist</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr scope="row" th:each="tempMunicipalities : ${municipalities}">
+            <th class="align-middle" th:text="${tempMunicipalities.id}"></th>
+            <th class="align-middle" th:text="${tempMunicipalities.name}"></th>
+            <th class="align-middle" th:text="${tempMunicipalities.alitude}"></th>
+            <th class="align-middle" th:text="${tempMunicipalities.area_size}"></th>
+            <th class="align-middle" th:text="${tempMunicipalities.inhabit}"></th>
+            <th class="align-middle" th:text="${tempMunicipalities.pollution}"></th>
+            <th class="align-middle" th:text="${tempMunicipalities.opinion_q}"></th>
+            <th class="align-middle" th:text="${tempMunicipalities.n_days_snow}"></th>
+            <th class="align-middle" th:text="${tempMunicipalities.id_dist}"></th>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
