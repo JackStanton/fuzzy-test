@@ -28,17 +28,27 @@
             <th scope="col">Возраст</th>
             <th scope="col">Заполненность</th>
             <th scope="col">id Муниципалитета</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
         <tr scope="row" th:each="tempBuildings : ${buildings}">
-            <th class="align-middle" th:text="${tempBuildings.id}"></th>
+            <th class="align-middle" th:text="${tempBuildings.id_b}"></th>
             <th class="align-middle" th:text="${tempBuildings.type}"></th>
             <th class="align-middle" th:text="${tempBuildings.size}"></th>
             <th class="align-middle" th:text="${tempBuildings.age}"></th>
             <th class="align-middle" th:text="${tempBuildings.flooded}"></th>
-            <th class="align-middle" th:text="${tempBuildings.municipality.id}"></th>
+            <th class="align-middle" th:text="${tempBuildings.municipality_id}"></th>
+            <th class="align-middle" >
+                <div class="col">
+                    <form th:method="post">
+                        <input  th:hidden="true"/>
+                        <input class="btn btn-outline-danger" role="button" type="submit" th:value="${'Подробнее'}"/>
+                    </form>
+                </div>
+            </th>
         </tr>
+
         </tbody>
     </table>
 </div>

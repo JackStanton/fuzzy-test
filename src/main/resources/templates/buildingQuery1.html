@@ -13,36 +13,19 @@
 </div>
 <div class="container-fluid well text-center">
     <div class="panel-body">
-        <h1>Таблица "Здания"</h1>
+        <h1>Кортеж</h1>
     </div>
 </div>
-
-<div class="container-fluid text-center">
-    <br>
-    <table class="table table-hover table-bordered" >
-        <thead class="thead-dark">
-        <tr>
-            <th scope="col">id</th>
-            <th scope="col">Тип</th>
-            <th scope="col">Размер</th>
-            <th scope="col">Возраст</th>
-            <th scope="col">Заполненность</th>
-            <th scope="col">id Муниципалитета</th>
-            <th scope="col">id Района</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr scope="row" th:each="tempBuildings : ${buildings}">
-            <th class="align-middle" th:text="${tempBuildings.id}"></th>
-            <th class="align-middle" th:text="${tempBuildings.type}"></th>
-            <th class="align-middle" th:text="${tempBuildings.size}"></th>
-            <th class="align-middle" th:text="${tempBuildings.age}"></th>
-            <th class="align-middle" th:text="${tempBuildings.flooded}"></th>
-            <th class="align-middle" th:text="${tempBuildings.municipality.id}"></th>
-            <th class="align-middle" th:text="${tempBuildings.municipality.district.id}"></th>
-        </tr>
-        </tbody>
-    </table>
+<div class="container">
+    <div class="container">
+        <form action="#" method="post">
+            <div class="form-group">
+                <label>m:</label>
+                <input type="text" class="form-control" required>
+            </div>
+            <button  type="submit" class="btn btn-outline-success">Назад</button>
+        </form>
+    </div>
 </div>
 </body>
 </html>

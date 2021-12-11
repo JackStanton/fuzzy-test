@@ -15,7 +15,7 @@ public class Building {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-    Long id;
+    Long id_b;
     @Column
     String type;
     @Column
@@ -24,8 +24,7 @@ public class Building {
     Integer age;
     @Column
     Integer flooded;
-
-    @ManyToOne()
-    Municipality municipality;
+    @Column
+    Long municipality_id;
 
 }

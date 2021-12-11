@@ -16,5 +16,4 @@ public class Singleton {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long fuzzyId;
   private double M;
-
 }

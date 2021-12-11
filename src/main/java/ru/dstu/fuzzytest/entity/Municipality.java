@@ -33,9 +33,6 @@ public class Municipality {
     @Column
     Integer n_days_snow;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "municipality")
-    List<Building> buildings;
-
     @ManyToOne()
     District district;
 }

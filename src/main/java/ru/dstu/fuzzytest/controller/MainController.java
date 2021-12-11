@@ -33,7 +33,7 @@ public class MainController {
 
     @RequestMapping("/query1")
     public String execQuery1(Model model){
-        model.addAttribute("buildings", buildingService.getAll());
+//        model.addAttribute("buildings", buildingService.getAll());
         return "buildingQuery1";
     }
 
