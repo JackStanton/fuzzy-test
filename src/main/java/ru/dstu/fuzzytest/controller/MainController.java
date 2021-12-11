@@ -31,6 +31,12 @@ public class MainController {
         return "buildingList";
     }
 
+    @RequestMapping("/query1")
+    public String execQuery1(Model model){
+        model.addAttribute("buildings", buildingService.getAll());
+        return "buildingQuery1";
+    }
+
     @RequestMapping("/municipalities")
     public String getAllMunicipality(Model model){
         model.addAttribute("municipalities", municipalityService.getAll());

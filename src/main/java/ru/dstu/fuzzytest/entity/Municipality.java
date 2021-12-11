@@ -32,9 +32,10 @@ public class Municipality {
     Integer opinion_q;
     @Column
     Integer n_days_snow;
-    @Column
-    Long id_dist;
 
-//    @OneToMany(fetch = FetchType.LAZY, mappedBy = "municipality",cascade = CascadeType.ALL)
-//    List<Building> buildings;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "municipality")
+    List<Building> buildings;
+
+    @ManyToOne()
+    District district;
 }

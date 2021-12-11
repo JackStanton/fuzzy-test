@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Table
 @Entity
@@ -24,4 +25,7 @@ public class District {
     String description;
     @Column
     Date valid_from;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "district")
+    List<Municipality> municipalities;
 }

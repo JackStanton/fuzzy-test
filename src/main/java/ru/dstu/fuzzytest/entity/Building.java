@@ -5,8 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
-
 @Entity
 @Table
 @Data
@@ -27,12 +25,7 @@ public class Building {
     @Column
     Integer flooded;
 
-    @Column
-    Long municipality_id;
-
-//    @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
-//    @JoinColumn(name = "municipality_id")
-//    Municipality municipality;
-
+    @ManyToOne()
+    Municipality municipality;
 
 }

@@ -28,6 +28,7 @@
             <th scope="col">Возраст</th>
             <th scope="col">Заполненность</th>
             <th scope="col">id Муниципалитета</th>
+            <th scope="col">id Района</th>
         </tr>
         </thead>
         <tbody>
@@ -38,6 +39,7 @@
             <th class="align-middle" th:text="${tempBuildings.age}"></th>
             <th class="align-middle" th:text="${tempBuildings.flooded}"></th>
             <th class="align-middle" th:text="${tempBuildings.municipality.id}"></th>
+            <th class="align-middle" th:text="${tempBuildings.municipality.district.id}"></th>
         </tr>
         </tbody>
     </table>
